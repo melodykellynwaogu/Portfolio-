@@ -1,0 +1,414 @@
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: linear-gradient(45deg rgb(118, 201, 255), rgb(241, 255, 222));
+    color: #333;
+}
+#navbar {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content:center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    font-family:'Segoe UI', Tahoma, Verdana, sans-serif;
+    transition: transform 0.1s ease-in-out;
+}
+#navbar a {
+    text-decoration: none;
+}
+#navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+#navbar ul li {
+    margin: 0 20px;
+}
+
+#navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#navbar ul li a:hover {
+    background-color:rgb(248, 250, 251);
+    color:rgb(16, 16, 15);
+    border-radius: 20px;
+    border: 10px solid white;
+    font-family: 'Times New Roman';
+}
+
+/* Welcome part */
+#welcome-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, rgb(118, 201, 255), rgb(103, 145, 43));
+    text-align: center;
+}
+
+#typing-text {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#typing-text::after {
+    content: "|";
+    display: inline-block;
+    animation: blinkCursor 0.8s infinite;
+}
+
+@keyframes blinkCursor {
+    50% {opacity: 0;}
+}
+
+#welcome-section h1 {
+    font-size: 3rem;
+    color: #333;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#about {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    padding: 80px 20px;
+    text-align: center;
+    color: #333;
+}
+
+#about p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 20px;
+}
+
+#project-filter {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#project-filter  button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#project-filter button:hover {
+    background-color: #0056b3;
+}
+
+#projects {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.projects h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-tile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.project-title h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-tile a {
+    text-decoration: none;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.project-tile .project-image {
+    width: 300px;
+    background-color: lightgray;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+    font-size: 1rem;
+}
+
+#contact {
+    padding: 50px 20px;
+    background-color: rgb(33, 150, 243);
+    text-align: center;
+}
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact form input, #contact form textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content:center;
+    margin-left: 30%;
+}
+
+#contact form button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer  {
+    background: #222;
+    color: #fff;
+    font-size: 1.2rem;
+    padding: 15px 0;
+    border-radius: 10px;
+    font-family: Goergia, Times New Roman;
+}
+
+footer p {
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color:greenyellow;
+}
+
+
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: top;
+}
+
+.footer-links {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links {
+    font-size: 1.5rem;
+}
+
+.footer-links a:hover {
+    color:cyan;
+    box-shadow: #007bff;
+}
+
+span #github:hover {
+    color:rgb(194, 189, 192);
+}
+
+span #instagram:hover {
+    color:darkorchid;
+}
+
+#contact form button:hover {
+    background-color: #0056b3;
+}
+
+.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+.dark-mode #navbar {
+    background-color: #333;
+}
+
+.dark-mode #projects {
+    background-color: #222;
+}
+
+.dark-mode #contact {
+    background-color: #333;
+}
+
+.project-image img {
+    width: 100%;
+    height: 200px;
+}
+
+/* General adjustments for smaller screens */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+    }
+
+    #welcome-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #about {
+        padding: 40px 10px;
+    }
+
+    #about p {
+        font-size: 1rem;
+    }
+
+    #skills-list {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    #skills-list ul {
+        font-size: 1rem;
+    }
+
+    #project-filter button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    #projects {
+        padding: 20px 10px;
+    }
+
+    .project-tile {
+        margin: 10px 0;
+    }
+
+    .project-tile .project-image {
+        width: 100%;
+    }
+
+    #contact {
+        padding: 30px 10px;
+    }
+
+    #contact form input, #contact form textarea {
+        margin-left: 0;
+        width: 90%;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Further adjustments for very small screens (mobile) */
+@media (max-width: 480px) {
+    #navbar ul li a {
+        font-size: 16px;
+    }
+
+    #welcome-section h1 {
+        font-size: 1.5rem;
+    }
+
+    #about h2 {
+        font-size: 1.8rem;
+    }
+
+    #about p {
+        font-size: 0.9rem;
+    }
+
+    #skills-list ul {
+        font-size: 0.9rem;
+    }
+
+    #project-filter button {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    footer p {
+        font-size: 0.9rem;
+    }
+
+    .footer-links {
+        font-size: 1rem;
+    }
+}
+
+#skills-list {
+    margin: 20px;
+    padding: 30px;
+    align-items: center;
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#skills-list ul {
+    list-style: none;
+    font-weight: bold;
+}
+.welcome-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
