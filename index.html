@@ -2,24 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Melody's Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-black transition-colors duration-500">
+<body class="bg-white text-gray-900 transition-colors duration-300">
 
   <!-- Navbar -->
-  <nav id="navbar" class="w-full px-6 py-4 flex justify-between items-center bg-gray-100 dark:bg-gray-900 shadow">
-    <h1 class="text-xl font-bold">Melody's Portfolio</h1>
-    <button id="theme-toggle" class="px-4 py-2 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition">
-      🌙 Dark Mode
-    </button>
+  <nav id="navbar" class="p-4 shadow-md bg-white flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Melody's Portfolio</h1>
+    <button id="theme-toggle" class="bg-gray-800 text-white px-4 py-2 rounded">Switch To Dark Mode</button>
   </nav>
 
-  <!-- Welcome Typing Section -->
-  <section class="text-center mt-20">
-    <h2 id="typing-text" class="text-4xl font-extrabold cursor text-indigo-600 dark:text-indigo-300"></h2>
+  <!-- Hero Section -->
+  <header class="text-center mt-12 px-4">
+    <h2 id="typing-text" class="text-4xl font-bold mb-4 text-indigo-600"></h2>
+    <p class="text-lg max-w-xl mx-auto text-gray-700">Explore my works, projects, and creative journey.</p>
+    <img src="images/hero-image.png" alt="Hero" class="mx-auto mt-6 rounded-lg shadow-lg max-w-md" />
+  </header>
+
+  <!-- Gallery or Projects -->
+  <section class="p-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12">
+    <div class="rounded overflow-hidden shadow-lg bg-white">
+      <img src="images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold text-xl">Project One</h3>
+        <p class="text-sm text-gray-600 mt-2">A brief description of your awesome project goes here.</p>
+      </div>
+    </div>
+
+    <!-- Add more project cards here -->
   </section>
 
   <script src="script.js"></script>
