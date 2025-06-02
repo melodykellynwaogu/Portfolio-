@@ -1,9 +1,18 @@
-.cursor::after {
-  content: "|";
-  animation: blink 1s infinite;
+/* Custom Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
 }
 
-@keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0; }
+body.dark-mode a {
+  color: #bb86fc;
+}
+
+body.dark-mode #navbar {
+  background-color: #1f1f1f;
+}
+
+body.dark-mode button {
+  background-color: #333333;
+  color: #ffffff;
 }
