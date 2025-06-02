@@ -24,8 +24,6 @@ function setTheme(isDark) {
   // localStorage.setItem("darkMode", isDark ? "true" : "false");
 }
 
-// // Uncomment to enable saving theme preference
-// if (localStorage.getItem("darkMode") === "true") setTheme(true);
 
 themeToggle.addEventListener("click", () => {
   const isDark = !document.body.classList.contains("dark-mode");
@@ -51,7 +49,7 @@ function filterProjects(category) {
     }
   });
 
-  // Highlight active button
+  
   const buttons = document.querySelectorAll('#project-filter button');
   buttons.forEach(btn => btn.classList.remove('active'));
   const activeBtn = Array.from(buttons).find(btn => 
