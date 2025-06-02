@@ -1,83 +1,27 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melody's Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <!-- Navbar Section -->
-  <nav id="navbar">
-    <ul>
-      <li><a href="#welcome-section">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills-list">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+<body class="bg-white text-black transition-colors duration-500">
+
+  <!-- Navbar -->
+  <nav id="navbar" class="w-full px-6 py-4 flex justify-between items-center bg-gray-100 dark:bg-gray-900 shadow">
+    <h1 class="text-xl font-bold">Melody's Portfolio</h1>
+    <button id="theme-toggle" class="px-4 py-2 rounded-lg text-white bg-indigo-600 hover:bg-indigo-700 transition">
+      🌙 Dark Mode
+    </button>
   </nav>
 
-  <!-- Welcome Section -->
-  <section id="welcome-section">
-    <div class="welcome-content">
-      <img src="https://i.postimg.cc/hv42gPSf/IMG-20250127-191704-241.webp" alt="Melody Kelly Nwaogu" class="profile-img">
-      <h1 id="typing-text">Welcome To My Portfolio</h1>
-    </div>
+  <!-- Welcome Typing Section -->
+  <section class="text-center mt-20">
+    <h2 id="typing-text" class="text-4xl font-extrabold cursor text-indigo-600 dark:text-indigo-300"></h2>
   </section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a web developer with experience in HTML, CSS, and JavaScript. I love building beautiful and functional websites.</p>
-    <p>In my free time I enjoy reading books, playing chess, and exploring new places </p>
-    <p>I am always looking for new challenges and opportunities to grow as a developer</p>
-    <p>Feel free to reach out to me if you have any question or if you would like to collaborate on a project </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills-list">
-    <h2>Skills</h2>
-    <ul>
-      <li style="color:chocolate">HTML</li>
-      <li style="color:skyblue">CSS</li>
-      <li style="color:yellow">JavaScript</li>
-      <li style="color:blue">Pyt<span style="color: yellow;">hon</span></li>
-      <li style="color:green">Nodes.js</li>
-      <li style="color:chocolate">Git</li>
-      <li style="color:rgb(23, 122, 155)">React</li>
-    </ul>
-  </section>
-
-  <!-- Project Filter Section -->
-  <div id="project-filter">
-    <button onclick="filterProjects('all')">All</button>
-    <button onclick="filterProjects('web-dev')">Web Development</button>
-    <button onclick="filterProjects('js')">JavaScript</button>
-    <button onclick="filterProjects('Python')">Python</button>
-  </div>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Project</h2>
-    <div class="project-tile" data-category="web-dev">
-      <h3>Login Form</h3>
-      <p>A simple login form using HTML and CSS with JavaScript</p>
-      <a href="https://melodykellynwaogu.github.io/login-waddle" target="_blank">View Project</a>
-      <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-        <img src="https://i.postimg.cc/xdb170k6/Screenshot-2025331-001009.png" alt="login-photo">
-      </div>
-    </div>
-    <div class="project-tile" data-category="js">
-      <h3>Age Calculator</h3>
-      <a href="https://melodykellynwaogu.io/Age-calculator/" target="_blank">View Project</a>
-      <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-        <img src="https://i.postimg.cc/jqhdB35Y/Screenshot-2025403-115101.png" alt="">
-      </div>
-    </div>
-    <div class="project-tile" data-category="js">
-      <h3>Minimalist Pricing Table</h3>
-      <a href="https://melodykellynwaogu.github.io/minilist-page/" target="_blank">View Project</a>
-      <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+  <script src="script.js"></script>
+</body>
+</html>
