@@ -21,7 +21,7 @@ const themeToggle = document.getElementById("theme-toggle");
 function setTheme(isDark) {
   document.body.classList.toggle("dark-mode", isDark);
   themeToggle.textContent = isDark ? "Switch To Light Mode" : "Switch To Dark Mode";
-  // localStorage.setItem("darkMode", isDark ? "true" : "false");
+  
 }
 
 
@@ -58,10 +58,10 @@ function filterProjects(category) {
   if (activeBtn) activeBtn.classList.add('active');
 }
 
-// Make filterProjects globally accessible
+
 window.filterProjects = filterProjects;
 
-// Optional: Initialize with 'all'
+
 filterProjects('all');
 
 
