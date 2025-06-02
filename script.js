@@ -7,9 +7,9 @@ function typeEffect() {
   if (index <= text.length) {
     typingText.textContent = text.substring(0, index);
     index++;
-    setTimeout(typeEffect, 80); // Typing speed
+    setTimeout(typeEffect, 80); 
   } else {
-    typingText.textContent = text; // Ensure final text is full
+    typingText.textContent = text; 
   }
 }
 typeEffect();
@@ -17,7 +17,7 @@ typeEffect();
 
 const themeToggle = document.getElementById("theme-toggle");
 
-// Optional: Save theme preference in localStorage
+
 function setTheme(isDark) {
   document.body.classList.toggle("dark-mode", isDark);
   themeToggle.textContent = isDark ? "Switch To Light Mode" : "Switch To Dark Mode";
