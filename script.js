@@ -1,5 +1,21 @@
+// Dark Mode Toggle
+const html = document.documentElement;
+const themeToggle = document.getElementById("theme-toggle");
+const userPref = localStorage.getItem("theme");
 
-// Typing effect for the welcome text
+if (userPref === "dark" || (!userPref && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+  html.classList.add("dark");
+  themeToggle.textContent = "☀️ Light Mode";
+}
+
+themeToggle.addEventListener("click", () => {
+  html.classList.toggle("dark");
+  const isDark = html.classList.contains("dark");
+  localStorage.setItem("theme", isDark ? "dark" : "light");
+  themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
+});
+
+// Typing Effect
 const typingText = document.getElementById("typing-text");
 const text = "Welcome To My Portfolio";
 let index = 0;
@@ -9,38 +25,15 @@ function typeEffect() {
   if (!isDeleting && index < text.length) {
     typingText.textContent += text.charAt(index);
     index++;
-    setTimeout(typeEffect, 100); // Typing speed
+    setTimeout(typeEffect, 100);
   } else if (isDeleting && index > 0) {
     typingText.textContent = text.substring(0, index - 1);
     index--;
-    setTimeout(typeEffect, 50); // Deleting speed
+    setTimeout(typeEffect, 50);
   } else {
-    isDeleting = !isDeleting; // Switch between typing and deleting
-    setTimeout(typeEffect, 1000); // Pause before switching
+    isDeleting = !isDeleting;
+    setTimeout(typeEffect, 1000);
   }
 }
 
 typeEffect();
-
-// Project filter functionality
-function filterProjects(category) {
-  const projectTiles = document.querySelectorAll(".project-tile");
-
-  projectTiles.forEach((tile) => {
-    if (category === "all" || tile.getAttribute("data-category") === category) {
-      tile.style.display = "block";
-    } else {
-      tile.style.display = "none";
-    }
-  });
-}
-
-// Theme toggle functionality (if you want to add this feature)
-// const themeToggle = document.getElementById("theme-toggle");
-// let isDarkMode = false;
-
-// themeToggle.addEventListener("click", () => {
-//   document.body.classList.toggle("dark-mode");
-//   isDarkMode = !isDarkMode;
-//   themeToggle.textContent = isDarkMode ? "Switch To Light Mode" : "Switch To Dark Mode";
-// });
