@@ -1,51 +1,76 @@
+
 const typingText = document.getElementById("typing-text");
 const text = "Welcome To My Portfolio";
 let index = 0;
-let isDeleting = false;
 
 function typeEffect() {
-    if (!isDeleting && index < text.length) {
-        typingText.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100); // Typing speed
-    } else if (isDeleting && index > 0) {
-        typingText.textContent = text.substring(0, index - 1);
-        index--;
-        setTimeout(typeEffect, 50); // Deleting speed
-    } else {
-        isDeleting = !isDeleting; // Switch between typing and deleting
-        setTimeout(typeEffect, 1000); // Pause before switching
-    }
+  if (index <= text.length) {
+    typingText.textContent = text.substring(0, index);
+    index++;
+    setTimeout(typeEffect, 80); // Typing speed
+  } else {
+    typingText.textContent = text; // Ensure final text is full
+  }
 }
-
 typeEffect();
 
 
 const themeToggle = document.getElementById("theme-toggle");
-let isDarkMode = false;
+
+// Optional: Save theme preference in localStorage
+function setTheme(isDark) {
+  document.body.classList.toggle("dark-mode", isDark);
+  themeToggle.textContent = isDark ? "Switch To Light Mode" : "Switch To Dark Mode";
+  // localStorage.setItem("darkMode", isDark ? "true" : "false");
+}
+
+// // Uncomment to enable saving theme preference
+// if (localStorage.getItem("darkMode") === "true") setTheme(true);
 
 themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    isDarkMode = !isDarkMode;
-    themeToggle.textContent = isDarkMode ? "Switch To Light Mode" : "Switch To Dark Mode";
+  const isDark = !document.body.classList.contains("dark-mode");
+  setTheme(isDark);
+});
+themeToggle.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    themeToggle.click();
+  }
 });
 
 
-const darkModeStyles = document.createElement("style");
-darkModeStyles.textContent = `
-    body.dark-mode {
-        background-color: #121212;
-        color: #ffffff;
+function filterProjects(category) {
+  const tiles = document.querySelectorAll('.project-tile');
+  tiles.forEach(tile => {
+    if (category === 'all' || tile.getAttribute('data-category') === category) {
+      tile.style.display = "flex";
+      tile.classList.add("project-show");
+    } else {
+      tile.style.display = "none";
+      tile.classList.remove("project-show");
     }
-    body.dark-mode a {
-        color: #bb86fc;
-    }
-    body.dark-mode #navbar {
-        background-color: #1f1f1f;
-    }
-    body.dark-mode button {
-        background-color: #333333;
-        color: #ffffff;
-    }
-`;
-document.head.appendChild(darkModeStyles);
+  });
+
+  // Highlight active button
+  const buttons = document.querySelectorAll('#project-filter button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  const activeBtn = Array.from(buttons).find(btn => 
+    btn.textContent.toLowerCase().includes(category.toLowerCase())
+  );
+  if (activeBtn) activeBtn.classList.add('active');
+}
+
+// Make filterProjects globally accessible
+window.filterProjects = filterProjects;
+
+// Optional: Initialize with 'all'
+filterProjects('all');
+
+
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute("href"));
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  });
+});
