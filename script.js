@@ -1,21 +1,4 @@
-// Dark Mode Toggle
-const html = document.documentElement;
-const themeToggle = document.getElementById("theme-toggle");
-const userPref = localStorage.getItem("theme");
 
-if (userPref === "dark" || (!userPref && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
-  html.classList.add("dark");
-  themeToggle.textContent = "☀️ Light Mode";
-}
-
-themeToggle.addEventListener("click", () => {
-  html.classList.toggle("dark");
-  const isDark = html.classList.contains("dark");
-  localStorage.setItem("theme", isDark ? "dark" : "light");
-  themeToggle.textContent = isDark ? "☀️ Light Mode" : "🌙 Dark Mode";
-});
-
-// Typing Effect
 const typingText = document.getElementById("typing-text");
 const text = "Welcome To My Portfolio";
 let index = 0;
@@ -35,5 +18,14 @@ function typeEffect() {
     setTimeout(typeEffect, 1000);
   }
 }
-
 typeEffect();
+
+
+const themeToggle = document.getElementById("theme-toggle");
+let isDarkMode = false;
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("dark-mode");
+  isDarkMode = !isDarkMode;
+  themeToggle.textContent = isDarkMode ? "Switch To Light Mode" : "Switch To Dark Mode";
+});
