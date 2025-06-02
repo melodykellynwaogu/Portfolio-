@@ -1,40 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melody's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-white text-gray-900 transition-colors duration-300">
+<body>
 
-  <!-- Navbar -->
-  <nav id="navbar" class="p-4 shadow-md bg-white flex justify-between items-center">
-    <h1 class="text-2xl font-bold">Melody's Portfolio</h1>
-    <button id="theme-toggle" class="bg-gray-800 text-white px-4 py-2 rounded">Switch To Dark Mode</button>
-  </nav>
+    <!-- Navbar Section -->
+     <nav id="navbar">
+        <ul>
+            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills-list">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+     </nav>
+     <!-- welcome section -->
+      <section id="welcome-section">
+        <div class="welcome-content">
+            <img src="https://i.postimg.cc/hv42gPSf/IMG-20250127-191704-241.webp" alt="Melody Kelly Nwaogu" class="profile-img">
+        </div>
+        <h1 id="typing-text">Welcome To My Portfolio</h1>
+      </section>
 
-  <!-- Hero Section -->
-  <header class="text-center mt-12 px-4">
-    <h2 id="typing-text" class="text-4xl font-bold mb-4 text-indigo-600"></h2>
-    <p class="text-lg max-w-xl mx-auto text-gray-700">Explore my works, projects, and creative journey.</p>
-    <img src="images/hero-image.png" alt="Hero" class="mx-auto mt-6 rounded-lg shadow-lg max-w-md" />
-  </header>
+      <!-- About Me -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>I am a web developer with experience in HTML,CSS and JavaScript. And a passion for creating bueatiful and fuctional websites. <br>
+            I love learning new technologies and improving my skills.</p>
+            <p>In my free time I enjoy reading books, playing chess, and exploring new places </p>
+            <p>I am always looking for new challenges and opportunities to grow as a developer</p>
+            <p>Feel free to reach out to me if you have any question or if you would like to collaborate on a project </p>
+      </section>
 
-  <!-- Gallery or Projects -->
-  <section class="p-6 grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-12">
-    <div class="rounded overflow-hidden shadow-lg bg-white">
-      <img src="images/project1.jpg" alt="Project 1" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="font-bold text-xl">Project One</h3>
-        <p class="text-sm text-gray-600 mt-2">A brief description of your awesome project goes here.</p>
-      </div>
-    </div>
+      <!--Skills section -->
+      <section id="skills-list">
+        <h2>Skills</h2>
+        <ul>
+            <li style="color:chocolate">HTML</li>
+            <li style="color:skyblue">CSS</li>
+            <li style="color:yellow">JavaScript</li>
+            <li style="color:blue">Pyt<span style="color: yellow;">hon</span></li>
+            <li style="color:green">Nodes.js</li>
+            <li style="color:chocolate">Git</li>
+            <li style="color:rgb(23, 122, 155)">React</li>
+        </ul>
+      </section>
 
-    <!-- Add more project cards here -->
-  </section>
 
-  <script src="script.js"></script>
+      <!-- Project Fillter section -->
+       <div id="project-filter">
+        <button onclick="filterProjects('all')">All</button>
+        <button onclick="filterProjects('web-dev')">Web Development</button>
+        <button onclick="filterProjects('js')">JavaScript</button>
+        <button onclick="filterProjects('Python')">Python</button>
+       </div>
+
+      <!--Project section -->
+      <section id="projects">
+        <h2>Project</h2>
+        <div class="project-tile" data-category="web-dev">
+            <h3>Login Form</h3>
+            <p>A simple login form using HTML and CSS with JavaScript</p>
+            <a href="https://melodykellynwaogu.github.io/login-waddle" target="_blank">View Project</a>
+            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+
+                <img src="https://i.postimg.cc/xdb170k6/Screenshot-2025331-001009.png" alt="login-photo">
+                <!-- placeholder for the login image -->
+            </div>
+        </div>
+
+        <div class="project-tile" data-category="js">
+            <h3>Age Calculator</h3>
+            <a href="https://melodykellynwaogu.io/Age-calculator/" target="_blank">View Project</a>
+            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+
+                <img src="https://i.postimg.cc/jqhdB35Y/Screenshot-2025403-115101.png" alt="">
+                <!-- placeholoder for the glitches -->
+            </div>
+        </div>
+
+        <div class="project-tile" data-category="js">
+            <h3>Minimalist Pricing Table</h3>
+            <a href="https://melodykellynwaogu.github.io/minilist-page/" target="_blank">View Project</a>
+            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+
+                <img src="https://i.postimg.cc/prCgGMP2/Screenshot-20250404-122158.png" alt="">
+                <!-- placeholoder for the glitches -->
+            </div>
+        </div>
+
+        <div class="project-tile" data-category="js">
+            <h3>Blog Page</h3>
+            <a href="https://melodykellynwaogu.github.io/blog-page/" target="_blank">View Project</a>
+            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+
+                <img src="https://i.postimg.cc/8P8H307G/Screenshot-20250404-134532.png" alt="">
+                <!-- placeholoder for the glitches -->
+            </div>
+        </div>
+
+        <div class="project-tile" data-category="js">
+            <h3>Testimonials</h3>
+            <a href="https://melodykellynwaogu.github.io/Testimonials-Cards/" target="_blank">View Project</a>
+            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
+
+                <img src="https://i.postimg.cc/50HQgf1V/Screenshot-20250404-145741.png" alt="">
+                <!-- placeholoder for the glitches -->
+            </div>
+        </div>
+      </section>
+
+      <!-- contact -->
+       <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please feel free to reach out to me via email or connect with me on <a style="text-decoration: none; color:bisque" href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
+        <form action="post" id="contact-form">
+            <input type="email" id="email" name="email" placeholder="Your Email Adress" required>
+            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+       </section>
+
+       <!-- theme togle-->
+        <button id="theme-toggle">Switch To Dark Mode</button>
+
+        <!-- Footer section-->
+         <footer>
+            <div class="footer-links">
+               <p>&copy; 2025 Melody Kelly Nwaogu. All right reserved.</p>
+               <i class="fab fa-instagram" style="color:deeppink;"></i>
+               <p>Follow me on <a href="https://www.instagram.com/melodykellynwaogu_/profilecard/?igsh=aXNrN3B6Y3MxbWlz" target="_blank"><span id="instagram">Instagram</span></a></p>
+               <i class="fab fa-github"></i>
+               <p>Connect with me <a href="https://github.com/melodykellynwaogu"><span id="github">Github</span></a> 
+            </div>
+        </footer>    
+        <script src="script.js"></script>
 </body>
-</html>
+</html>Can you upgrade my portfolio. I meant standout portfolio. Should I bring both the css and J's code I wrote? If so wait please
