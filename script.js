@@ -1,52 +1,101 @@
-// Typing effect for the welcome text
-const typingText = document.getElementById("typing-text");
-const text = "Welcome To My Portfolio";
-let index = 0;
-let isDeleting = false;
+// Lates Projects button click handler
+const latesBtn = document.getElementById('lates');
+if (latesBtn) {
+  latesBtn.addEventListener('click', function() {
+    window.location.href = 'lates.html';
+  });
+}
+const themeToggle = document.getElementById("theme-toggle");
+document.body.classList.add("dark-mode");
+themeToggle.textContent = "Switch To Light Mode";
 
-function typeEffect() {
-    if (!isDeleting && index < text.length) {
-        typingText.textContent += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 100); // Typing speed
-    } else if (isDeleting && index > 0) {
-        typingText.textContent = text.substring(0, index - 1);
-        index--;
-        setTimeout(typeEffect, 50); // Deleting speed
-    } else {
-        isDeleting = !isDeleting; // Switch between typing and deleting
-        setTimeout(typeEffect, 1000); // Pause before switching
-    }
+function setTheme(isDark) {
+  document.body.classList.toggle("dark-mode", isDark);
+  themeToggle.textContent = isDark ? "Switch To Light Mode" : "Switch To Dark Mode";
 }
 
-typeEffect();
-
-// Theme toggle functionality
-const themeToggle = document.getElementById("theme-toggle");
-let isDarkMode = false;
-
 themeToggle.addEventListener("click", () => {
-    document.body.classList.toggle("dark-mode");
-    isDarkMode = !isDarkMode;
-    themeToggle.textContent = isDarkMode ? "Switch To Light Mode" : "Switch To Dark Mode";
+  const isDark = !document.body.classList.contains("dark-mode");
+  setTheme(isDark);
 });
 
-// Add dark mode styles dynamically
-const darkModeStyles = document.createElement("style");
-darkModeStyles.textContent = `
-    body.dark-mode {
-        background-color: #121212;
-        color: #ffffff;
+themeToggle.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") {
+    e.preventDefault();
+    themeToggle.click();
+  }
+});
+
+
+const typingText = document.getElementById("typing-text");
+const text = "Python Web-developer";
+let index = 0;
+typingText.textContent = "";
+function typeEffect() {
+  if (index <= text.length) {
+    typingText.textContent = text.substring(0, index);
+    index++;
+    setTimeout(typeEffect, 80);
+  } else {
+    typingText.textContent = text;
+  }
+}
+typeEffect();
+
+
+function filterProjects(category) {
+  const tiles = document.querySelectorAll('.project-tile');
+  tiles.forEach(tile => {
+    if (category === 'all' || tile.getAttribute('data-category') === category) {
+      tile.style.display = "flex";
+    } else {
+      tile.style.display = "none";
     }
-    body.dark-mode a {
-        color: #bb86fc;
+  });
+
+  
+  const buttons = document.querySelectorAll('#project-filter button');
+  buttons.forEach(btn => btn.classList.remove('active'));
+  const activeBtn = Array.from(buttons).find(btn => {
+    if (category === 'all') return btn.textContent.trim().toLowerCase() === 'all';
+    if (category === 'web-dev') return btn.textContent.toLowerCase().includes('web');
+    if (category === 'js') return btn.textContent.toLowerCase().includes('js') || btn.textContent.toLowerCase().includes('ml');
+    if (category === 'python') return btn.textContent.toLowerCase().includes('python');
+    return false;
+  });
+  if (activeBtn) activeBtn.classList.add('active');
+}
+window.filterProjects = filterProjects;
+filterProjects('all');
+
+
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function(e) {
+    e.preventDefault();
+    const section = document.querySelector(this.getAttribute("href"));
+    if (section) section.scrollIntoView({ behavior: "smooth" });
+  });
+});
+
+function showThankYou(event) {
+    event.preventDefault();
+    var form = event.target;
+    var thankYou = document.getElementById('thank-you-message');
+    if (thankYou) {
+        thankYou.style.display = 'block';
+        form.style.display = 'none';
     }
-    body.dark-mode #navbar {
-        background-color: #1f1f1f;
-    }
-    body.dark-mode button {
-        background-color: #333333;
-        color: #ffffff;
-    }
-`;
-document.head.appendChild(darkModeStyles);
+
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+}
+
+
+
+
+

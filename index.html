@@ -8,137 +8,67 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
+
     
-    <!-- Navbar Section -->
      <nav id="navbar">
         <ul>
-            <li><a href="#welcome-section">Home</a></li>
+            <li><a href="index.html" class="text-blue-600 font-bold">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills-list">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="skills.html" class="hover:text-blue-500">Skills</a></li>
+            <li><a href="projects.html" class="hover:text-blue-500">Projects</a></li>
+            <li><a href="certificates.html" class="hover:text-blue-500">Certificates</a></li>
+            <li><a href="gallery.html" class="hover:text-blue-500">Gallery</a></li>
+            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
         </ul>
      </nav>
-     <!-- welcome section -->
+     
       <section id="welcome-section">
-        <div class="welcome-content">
-            <img src="https://i.postimg.cc/hv42gPSf/IMG-20250127-191704-241.webp" alt="Melody Kelly Nwaogu" class="profile-img">
+        <div class="welcome-content flex flex-col items-center justify-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow mb-8">
+            <img src="/images/profile-pic.png" alt="Melody Kelly Nwaogu" class="profile-img w-40 h-40 rounded-full shadow-lg mb-4 border-4 border-blue-200 dark:border-gray-700">
+            <h1 id="typing-text" class="text-4xl font-bold mb-2 text-center">Python Web Developer</h1>
+            <h2 class="text-2xl font-semibold text-center hover:text-blue-500" style="cursor: pointer;">
+                Hi,👋 I'm <span class="font-bold text-purple-700 dark:text-purple-300" style="font-family: Georgia;">Melody</span><span class="font-bold text-blue-700 dark:text-blue-300 ml-1" style="font-family: Georgia;">Kelly</span>
+            Nwaogu</h2>
+            <p class="text-lg text-center mt-2 text-gray-700 dark:text-gray-300">From Nigeria &mdash; Building beautiful web experiences</p>
         </div>
-        <h1 id="typing-text">Welcome To My Portfolio</h1>
       </section>
+
+      <div id="project-filter" class="flex justify-center gap-4 mb-8">
+        <button onclick="filterProjects('all')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">All</button>
+        <button onclick="filterProjects('web-dev')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Web Development</button>
+        <button onclick="filterProjects('ml')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Local ML</button>
+        <button onclick="filterProjects('Python')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Python</button>
+    </div>
       
-      <!-- About Me -->
-      <section id="about">
-        <h2>About Me</h2>
-        <p>I am a web developer with experience in HTML,CSS and JavaScript. And a passion for creating bueatiful and fuctional websites. <br>
-            I love learning new technologies and improving my skills.</p>
-            <p>In my free time I enjoy reading books, playing chess, and exploring new places </p>
-            <p>I am always looking for new challenges and opportunities to grow as a developer</p>
-            <p>Feel free to reach out to me if you have any question or if you would like to collaborate on a project </p>
-      </section>
-
-      <!--Skills section -->
-      <section id="skills-list">
-        <h2>Skills</h2>
-        <ul>
-            <li style="color:chocolate">HTML</li>
-            <li style="color:skyblue">CSS</li>
-            <li style="color:yellow">JavaScript</li>
-            <li style="color:blue">Pyt<span style="color: yellow;">hon</span></li>
-            <li style="color:green">Nodes.js</li>
-            <li style="color:chocolate">Git</li>
-            <li style="color:rgb(23, 122, 155)">React</li>
-        </ul>
-      </section>
-
-
-      <!-- Project Fillter section -->
-       <div id="project-filter">
-        <button onclick="filterProjects('all')">All</button>
-        <button onclick="filterProjects('web-dev')">Web Development</button>
-        <button onclick="filterProjects('js')">JavaScript</button>
-        <button onclick="filterProjects('Python')">Python</button>
-       </div>
-
-      <!--Project section -->
-      <section id="projects">
-        <h2>Project</h2>
-        <div class="project-tile" data-category="web-dev">
-            <h3>Login Form</h3>
-            <p>A simple login form using HTML and CSS with JavaScript</p>
-            <a href="https://melodykellynwaogu.github.io/login-waddle" target="_blank">View Project</a>
-            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-
-                <img src="https://i.postimg.cc/xdb170k6/Screenshot-2025331-001009.png" alt="login-photo">
-                <!-- placeholder for the login image -->
-            </div>
-        </div>
-
-        <div class="project-tile" data-category="js">
-            <h3>Age Calculator</h3>
-            <a href="https://melodykellynwaogu.io/Age-calculator/" target="_blank">View Project</a>
-            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-
-                <img src="https://i.postimg.cc/jqhdB35Y/Screenshot-2025403-115101.png" alt="">
-                <!-- placeholoder for the glitches -->
-            </div>
-        </div>
-
-        <div class="project-tile" data-category="js">
-            <h3>Minimalist Pricing Table</h3>
-            <a href="https://melodykellynwaogu.github.io/minilist-page/" target="_blank">View Project</a>
-            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-
-                <img src="https://i.postimg.cc/prCgGMP2/Screenshot-20250404-122158.png" alt="">
-                <!-- placeholoder for the glitches -->
-            </div>
-        </div>
-
-        <div class="project-tile" data-category="js">
-            <h3>Blog Page</h3>
-            <a href="https://melodykellynwaogu.github.io/blog-page/" target="_blank">View Project</a>
-            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-
-                <img src="https://i.postimg.cc/8P8H307G/Screenshot-20250404-134532.png" alt="">
-                <!-- placeholoder for the glitches -->
-            </div>
-        </div>
-
-        <div class="project-tile" data-category="js">
-            <h3>Testimonials</h3>
-            <a href="https://melodykellynwaogu.github.io/Testimonials-Cards/" target="_blank">View Project</a>
-            <div class="project-image" style="height: 200px; background-color: lightgray; margin-top: 10px;">
-
-                <img src="https://i.postimg.cc/50HQgf1V/Screenshot-20250404-145741.png" alt="">
-                <!-- placeholoder for the glitches -->
-            </div>
+      <section id="about" style="font-family: Georgia;">
+        <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
+        <p class="text-lg mb-2 text-center">Hi, I'm <span class="font-semibold text-blue-700">Melody Kelly Nwaogu</span> from Nigeria. I'm an aspiring web developer passionate about building beautiful and functional websites.</p>
+        <p class="mb-2 text-center">I'm proficient in <span class="font-semibold">HTML, CSS, Python</span>. I use <span class="font-semibold">Flask</span> as my backend framework, often working with <span class="font-semibold">PostgreSQL</span> for data storage. I also use Bootstrap for effective design and layouts.</p>
+        <p class="mb-2 text-center">I love learning new technologies and improving my skills. In my free time, I enjoy reading books, playing chess, and exploring new tech.</p>
+        <p class="mb-2 text-center">I am always looking for new challenges and opportunities to grow as a developer. Feel free to reach out if you have any questions or would like to collaborate on a project!</p>
+        <div class="mt-8 max-w-md mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-4">
+            <h3 class="text-xl font-semibold mb-2 text-center">Languages</h3>
+            <ul class="flex flex-col items-center gap-2 text-base" style="list-style: none;" >
+                <li><span class="font-medium">English</span> <span class="text-blue-600 dark:text-green-300">(Proficient)</span></li>
+                <li><span class="font-medium">Igbo</span> <span class="text-green-600 dark:text-green-300">(Native)</span></li>
+                <li><span class="font-medium">Chichawa</span> <span class="text-yellow-600 dark:text-yellow-300">(Novice)</span></li>
+                <li><span class="font-medium">French</span> <span class="text-yellow-600 dark:text-yellow-300">(Novice)</span></li>
+            </ul>
         </div>
       </section>
+        <button id="theme-toggle" class="block mx-auto mt-8 px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">Switch To Dark Mode</button>
 
-      <!-- contact -->
-       <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you would like to get in touch, please feel free to reach out to me via email or connect with me on <a style="text-decoration: none; color:bisque" href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">LinkedIn</a></p>
-        <form action="post" id="contact-form">
-            <input type="email" id="email" name="email" placeholder="Your Email Adress" required>
-            <textarea name="message" id="message" placeholder="Your Message"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-       </section>
-
-       <!-- theme togle-->
-        <button id="theme-toggle">Switch To Dark Mode</button>
-
-        <!-- Footer section-->
-         <footer>
-            <div class="footer-links">
-               <p>&copy; 2025 Melody Kelly Nwaogu. All right reserved.</p>
-               <i class="fab fa-instagram" style="color:deeppink;"></i>
-               <p>Follow me on <a href="https://www.instagram.com/melodykellynwaogu_/profilecard/?igsh=aXNrN3B6Y3MxbWlz" target="_blank"><span id="instagram">Instagram</span></a></p>
-               <i class="fab fa-github"></i>
-               <p>Connect with me <a href="https://github.com/melodykellynwaogu"><span id="github">Github</span></a> 
+        <footer class="mt-12 bg-gray-100 dark:bg-gray-900 py-6">
+            <div class="footer-links flex flex-col items-center space-y-2">
+                <p>&copy; 2025 Melody Kelly Nwaogu. All rights reserved.</p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/melodykellynwaogu_/profilecard/?igsh=aXNrN3B6Y3MxbWlz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
+                    <a href="https://github.com/melodykellynwaogu" target="_blank" aria-label="Github"><i class="fab fa-github text-gray-800 dark:text-gray-200 text-2xl"></i></a>
+                    <a href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin text-blue-700 text-2xl"></i></a>
+                    <a href="https://dev.to/melody_kelly_n" target="_blank" ><i class="fab fa-dev text-green-600 text-2xl"></i></a>
+                </div>
             </div>
-        </footer>    
+        </footer>
         <script src="script.js"></script>
 </body>
 </html>
