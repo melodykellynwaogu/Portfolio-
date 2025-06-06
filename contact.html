@@ -21,12 +21,35 @@
 
     <section id="contact" class="max-w-xl mx-auto p-6 bg-white dark:bg-gray-800 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-        <p class="mb-4 text-center">If you would like to get in touch, please feel free to reach out to me via email or connect with me on 
-            <a class="text-yellow-200 underline" style="text-decoration: none; color:blueviolet" href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+        <p class="mb-4 text-center">
+            If you would like to get in touch, please feel free to reach out to me via email or connect with me on
+            <a
+                class="text-violet-600 underline hover:text-violet-800 transition"
+                href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank"
+                rel="noopener"
+            >LinkedIn</a>
         </p>
         <form action="https://formspree.io/f/mgvkjdbr" method="POST" class="contact-form space-y-4" onsubmit="showThankYou(event)" id="contact-form">
-            <input type="email" id="email" name="email" placeholder="Your Email Address" required class="w-full p-3 rounded border border-gray-300 dark:bg-gray-700 dark:border-gray-600">
-            <textarea name="message" id="message" placeholder="Your Message" required class="w-full p-3 rounded border border-gray-300 dark:bg-gray-700 dark:border-gray-600"></textarea>
+            <label for="email" class="sr-only">Your Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Your Email Address"
+                required
+                aria-label="Your Email Address"
+                class="w-full p-3 rounded border border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+            >
+            <label for="message" class="sr-only">Your Message</label>
+            <textarea
+                name="message"
+                id="message"
+                placeholder="Your Message"
+                required
+                aria-label="Your Message"
+                class="w-full p-3 rounded border border-gray-300 dark:bg-gray-700 dark:border-gray-600"
+            ></textarea>
             <button type="submit" class="w-full py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Send Message</button>
         </form>
         <div id="thank-you-message" style="display: none; color:cyan; font-weight: bold; margin-top:1rem;" class="text-center">
