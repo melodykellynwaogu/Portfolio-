@@ -13,8 +13,7 @@ body {
     background: linear-gradient(135deg, #bde6fb 0%, #f1ffde 100%);
     color: #222;
     transition: background 0.5s, color 0.5s;
-<<<<<<< HEAD
-=======
+
 }
 
 #navbar {
@@ -37,7 +36,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: center;
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
+
 }
 
 #navbar {
@@ -77,11 +76,8 @@ body {
 
 
 #navbar ul li {
-<<<<<<< HEAD
     flex-shrink: 1;
     white-space: nowrap;
-=======
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
     margin: 0 24px;
     transition: transform 0.2s;
 }
@@ -114,20 +110,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
     background: linear-gradient(135deg, #1f026e 0%, #7c0ae7 100%);
     text-align: center;
     padding-top: 60px;
+}
 
 .dark-mode #welcome-section {
     background: linear-gradient(135deg, #232526 0%, #1e2220 100%) !important;
 }
-=======
-    background: linear-gradient(45deg, #76c9ff 0%, #67912b 100%);
-    text-align: center;
-    padding-top: 60px;
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
-}
+
 
 #typing-text {
     font-family: 'Montserrat', Arial, sans-serif;
@@ -157,7 +148,7 @@ body {
     50% { opacity: 0; }
 }
 
-.profile-img {
+ .profile-img {
     width: 170px;
     height: 170px;
     border-radius: 50%;
@@ -165,17 +156,14 @@ body {
     border: 5px solid #fff;
     box-shadow: 0 8px 24px #3333331a;
     object-fit: cover;
-<<<<<<< HEAD
     cursor: pointer;
 }
 
 .profile-img:hover {
     transform: rotate(360deg);
     transition: transform 1.5s ease-in-out;
-    
-=======
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 }
+
 
 #about {
     background: linear-gradient(135deg, #fafafa 30%, #e0e0e0 100%);
@@ -198,11 +186,7 @@ body {
 #about h2 {
     font-family: 'Montserrat', Arial, sans-serif;
     font-size: 2.6rem;
-<<<<<<< HEAD
     color: #196fa5;
-=======
-    color: #1e3a4c;
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
     margin-bottom: 24px;
     text-shadow: 0 2px 10px #40c4ff22;
 }
@@ -254,11 +238,6 @@ body {
     transform: scale(1.06);
 }
 
-<<<<<<< HEAD
-
-=======
-/* Project Filter Section */
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 #project-filter {
     text-align: center;
     margin: 32px 0 12px 0;
@@ -285,11 +264,6 @@ body {
     transform: translateY(-2px) scale(1.06);
 }
 
-<<<<<<< HEAD
-
-=======
-/* Projects Section */
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 #projects {
     padding: 60px 20px 60px 20px;
     background: #fff;
@@ -308,11 +282,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-<<<<<<< HEAD
-    margin: 60px 0;
-=======
+
     margin: 34px 0;
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
     background: linear-gradient(125deg, #e3f8ff 60%, #d6f5d6 100%);
     border-radius: 22px;
     box-shadow: 0 8px 30px #40c4ff18;
@@ -375,11 +346,6 @@ body {
     transform: scale(1.07) rotate(-1.5deg);
 }
 
-<<<<<<< HEAD
-
-=======
-/* Contact Section */
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 #contact {
     padding: 60px 20px;
     background: linear-gradient(120deg, #21a9f3 80%, #bde6fb 100%);
@@ -456,7 +422,7 @@ body {
     background: linear-gradient(92deg, #0056b3, #009be6);
     transform: scale(1.04);
 }
-<<<<<<< HEAD
+
 #lates {
     display: block;
     margin: 60px auto 0 auto;
@@ -479,10 +445,6 @@ body {
     transform: scale(1.04);
 }
 
-=======
-
-/* Footer Section */
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 footer {
     background: #222;
     color: #fff;
@@ -532,20 +494,18 @@ footer a {
 
 span#github:hover {
     color: #c2bdc0;
-<<<<<<< HEAD
-=======
 }
 
 span#instagram:hover {
     color: #8e44ad;
 }
 
-/* DARK MODE */
+
 .dark-mode, .dark-mode body {
     background: linear-gradient(135deg, #232526 0%, #1e2220 100%) !important;
     color: #f1f1f1;
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 }
+
 
 span#instagram:hover {
     color: #8e44ad;
@@ -658,11 +618,6 @@ span#instagram:hover {
     color: #40c4ff;
 }
 
-<<<<<<< HEAD
-
-=======
-/* Responsive Design */
->>>>>>> 3b656c077b8c85a98061699ee7dcb1564878665b
 @media (max-width: 900px) {
     #skills-list ul {
         gap: 8px 12px;
