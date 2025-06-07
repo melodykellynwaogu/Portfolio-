@@ -29,7 +29,7 @@ themeToggle.addEventListener("keydown", (e) => {
 
 const typingText = document.getElementById("typing-text");
 if (typingText) {
-  const text = "Welcome To My Portfolio"; // or "Python Web-developer"
+  const text = "Python Web-developer"; 
   let index = 0;
   typingText.textContent = "";
   function typeEffect() {

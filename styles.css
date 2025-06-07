@@ -115,9 +115,6 @@ body {
     padding-top: 60px;
 }
 
-.dark-mode #welcome-section {
-    background: linear-gradient(135deg, #232526 0%, #1e2220 100%) !important;
-}
 
 
 #typing-text {
