@@ -10,7 +10,7 @@ if (latesBtn) {
 
 const typingText = document.getElementById("typing-text");
 if (typingText) {
-  const text = "Python Web-developer"; 
+  const text = "Frontend Web-developer | JavaScript"; 
   let index = 0;
   typingText.textContent = "";
   function typeEffect() {
