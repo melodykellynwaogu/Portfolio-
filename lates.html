@@ -5,42 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Melody's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <nav id="navbar" class="bg-white dark:bg-gray-800 shadow mb-8">
+<body class="bg-gray-900 text-gray-100 min-h-screen relative overflow-x-hidden">
+  <div class="relative z-10">
+    <nav id="navbar" class="bg-gray-900 shadow mb-8">
         <ul class="flex justify-center space-x-6 py-4">
             <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
             <li><a href="projects.html" class="text-blue-600 font-bold">Projects</a></li>
         </ul>
     </nav>
-    <div id="lates">
-        <h2>Check Out My Lates Work-done</h2>
+    <div id="lates" class="max-w-2xl mx-auto my-8 p-6 bg-gradient-to-br from-blue-900 via-gray-900 to-gray-950 rounded-2xl shadow-lg border border-blue-800/30 text-center">
+        <p class="text-xl font-bold text-blue-400 mb-2">Check out my latest projects below!</p>
+        <p class="text-lg font-semibold text-green-300 mb-1">Click on the project titles to view them live.</p>
+        <p class="text-lg font-semibold text-pink-300">Feel free to explore and provide feedback!</p>
     </div>
     <section id="projects" class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         <div class="project-tile bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center" data-category="web-dev">
             <h3 class="text-xl font-bold mb-2">Terminal board</h3>
             <p class="mb-2"></p>
-            <a href="https://terminal-line.onrender.com" target="_blank" class="text-blue-600 hover:underline mb-2">View</a>
+            <a href="https://terminal-line.onrender.com" target="_blank" class="text-blue-600 hover:underline mb-2  font-bold">Termianl Board</a>
+            <p class="text-xl font-bold text-blue-400 mb-2">This was both a fun UI and backend project, and a exercise in python logic structuring Using Flask.</p>
             <div class="project-image w-full h-48 bg-gray-200 flex items-center justify-center rounded mb-2">
-                <img src="/images/Terminal.png" alt="login-photo" class="object-cover h-full rounded">
+                <img src="https://i.postimg.cc/ydhbCx7p/Terminal.png" alt="login-photo" class="object-cover h-full rounded">
             </div>
         </div>
         <div class="project-tile bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center" data-category="web-dev">
             <h3 class="text-xl font-bold mb-2">List App</h3>
             <p class="mb-2"></p>
-            <a href="https://mini-list-app.onrender.com" target="_blank" class="text-blue-600 hover:underline mb-2">View</a>
+            <a href="https://welcome-page-5qeh.onrender.com/" target="_blank" class="text-blue-600 hover:underline mb-2  font-bold">List App</a>
+            <p class="text-xl font-bold text-green-500 mb-2">This is a simple list app that allows you to add, edit, and delete items from your list, built with Flask and PostgreSQL.</p>
             <div class="project-image w-full h-48 bg-gray-200 flex items-center justify-center rounded mb-2">
-                <img src="/images/list app.png" alt="login-photo" class="object-cover h-full rounded">
+                <img src="https://i.postimg.cc/y8H5n2cy/Screenshot-20250606-145723.png" alt="login-photo" class="object-cover h-full rounded">
             </div>
         </div>
         <div class="project-tile bg-white dark:bg-gray-800 rounded-lg shadow p-6 flex flex-col items-center" data-category="web-dev">
-            <h3 class="text-xl font-bold mb-2">Anchor BT</h3>
+            <h3 class="text-xl font-bold mb-2">Anchor Chatbot</h3>
             <p class="mb-2"></p>
-            <a href="https://anchor-ai.onrender.com" target="_blank" class="text-blue-600 hover:underline mb-2">View</a>
+            <a href="https://anchor-ai.onrender.com" target="_blank" class="text-blue-600 hover:underline mb-2  font-bold">Anchor Chatbot</a>
+            <p class="text-xl font-bold text-purple-400 mb-2">This is a chatbot that allows user's to search for information on the web, and chat with it. Built with Flask, PostgreSQL, and Wikipedia API for the search functionality.</p>
+            <p class="text-xl font-bold text-pink-400 mb-2">This was a fun project that allowed me to explore the use of AI in web development.</p>
             <div class="project-image w-full h-48 bg-gray-200 flex items-center justify-center rounded mb-2">
-                <img src="/images/Anchor BT.png" alt="login-photo" class="object-cover h-full rounded">
+                <img src="https://i.postimg.cc/qR3VW4Fz/Anchor-BT.png" alt="login-photo" class="object-cover h-full rounded">
             </div>
         </div>
     </section>
@@ -56,6 +62,6 @@
         <p></p>
     </footer>
     <script src="script.js"></script>
+  </div>
 </body>
 </html>
-

@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Melody's Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="bg-gray-900 text-gray-100 min-h-screen">
-    <nav id="navbar" class="bg-white dark:bg-gray-800 shadow mb-8">
+<body class="bg-gray-900 text-gray-100 min-h-screen relative overflow-x-hidden">
+  <div class="relative z-10">
+    <nav id="navbar" class="bg-gray-900 shadow mb-8">
         <ul class="flex justify-center space-x-6 py-4">
             <li><a href="index.html" class="hover:text-blue-500">Home</a></li>
             <li><a href="skills.html" class="hover:text-blue-500">Skills</a></li>
@@ -21,13 +21,14 @@
 
     <section id="contact" class="max-w-xl mx-auto p-6 bg-gray-900 text-gray-100 rounded-lg shadow">
         <h2 class="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-        <p class="mb-4 text-center">
+        <p class="mb-4 text-center mb-2 text-pink-400 font-semibold">
             If you would like to get in touch, please feel free to reach out to me via email or connect with me on
             <a class="text-violet-600 underline hover:text-violet-800 transition" href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener">LinkedIn</a>
         </p>
         <form action="https://formspree.io/f/mgvkjdbr" method="POST" class="contact-form space-y-4" onsubmit="showThankYou(event)" id="contact-form">
             <label for="email" class="sr-only">Your Email Address</label>
             <input
+                style="color: black; font-family: Georgia; font-size: 16px; line-height: 1.5;"
                 type="email"
                 id="email"
                 name="email"
@@ -37,6 +38,7 @@
                 class="w-full p-3 rounded border border-gray-300 dark:bg-gray-700 dark:border-gray-600">
             <label for="message" class="sr-only">Your Message</label>
             <textarea
+                style="color: black; font-family: Georgia; font-size: 16px; line-height: 1.5;"
                 name="message"
                 id="message"
                 placeholder="Your Message"
@@ -51,7 +53,7 @@
         </div>
     </section>
 
-    <button id="theme-toggle" class="block mx-auto mt-8 px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">Switch To Dark Mode</button>
+
 
     <footer class="mt-12 bg-gray-900 text-gray-100 py-6 w-full fixed bottom-0 left-0">
         <div class="footer-links flex flex-col items-center space-y-2">
@@ -64,6 +66,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
+    
+  </div>
 </body>
 </html>

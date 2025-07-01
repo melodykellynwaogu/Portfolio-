@@ -6,30 +6,11 @@ if (latesBtn) {
 }
 
 
-const themeToggle = document.getElementById("theme-toggle");
-themeToggle.textContent = "Switch To Dark Mode";
-
-function setTheme(isDark) {
-  document.body.classList.toggle("dark-mode", isDark);
-  themeToggle.textContent = isDark ? "Switch To Light Mode" : "Switch To Dark Mode";
-}
-
-themeToggle.addEventListener("click", () => {
-  const isDark = !document.body.classList.contains("dark-mode");
-  setTheme(isDark);
-});
-
-themeToggle.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" || e.key === " ") {
-    e.preventDefault();
-    themeToggle.click();
-  }
-});
 
 
 const typingText = document.getElementById("typing-text");
 if (typingText) {
-  const text = "Python Web-developer"; 
+  const text = "Frontend Web-developer | JavaScript"; 
   let index = 0;
   typingText.textContent = "";
   function typeEffect() {

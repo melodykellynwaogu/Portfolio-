@@ -4,65 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Melody's Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      html { font-family: Georgia, 'Times New Roman', Times, serif; }
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body class="dark-mode">
-    <nav id="navbar">
-        <ul>
-            <li><a href="index.html" class="text-blue-600 font-bold">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="skills.html" class="hover:text-blue-500">Skills</a></li>
-            <li><a href="projects.html" class="hover:text-blue-500">Projects</a></li>
-            <li><a href="certificates.html" class="hover:text-blue-500">Certificates</a></li>
-            <li><a href="gallery.html" class="hover:text-blue-500">Gallery</a></li>
-            <li><a href="contact.html" class="hover:text-blue-500">Contact</a></li>
+<body class="bg-gray-900 text-gray-100 min-h-screen relative overflow-x-hidden">
+    <nav id="navbar" class="bg-gray-950/80 shadow-lg sticky top-0 z-50 mb-8">
+      <div class="max-w-5xl mx-auto px-4">
+        <ul class="flex flex-wrap justify-center gap-6 py-4">
+          <li><a href="index.html" class="text-blue-400 font-bold underline underline-offset-4 decoration-2" aria-current="page">Home</a></li>
+          <li><a href="#about" class="hover:underline hover:text-blue-400 transition">About</a></li>
+          <li><a href="skills.html" class="hover:underline hover:text-blue-400 transition">Skills</a></li>
+          <li><a href="projects.html" class="hover:underline hover:text-blue-400 transition">Projects</a></li>
+          <li><a href="certificates.html" class="hover:underline hover:text-blue-400 transition">Certificates</a></li>
+          <li><a href="gallery.html" class="hover:underline hover:text-blue-400 transition">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline hover:text-blue-400 transition">Contact</a></li>
         </ul>
+      </div>
     </nav>
-    <section id="welcome-section">
-    <div class="welcome-content flex flex-col items-center justify-center py-12 bg-white dark:bg-gray-800 rounded-lg shadow mb-8">
-        <img src="/images/profile-pic.png" alt="Melody Kelly Nwaogu" class="profile-img w-40 h-40 rounded-full shadow-lg mb-4 border-4 border-blue-200 dark:border-gray-700">
-        <h1 id="typing-text" class="text-4xl font-bold mb-2 text-center">Python Web Developer</h1>
-        <h2 class="text-2xl font-semibold text-center hover:text-blue-500" style="cursor: pointer;">
-            Hi,👋 I'm <span class="font-bold text-purple-700 dark:text-purple-300" style="font-family: Georgia;">Melody</span><span class="font-bold text-blue-700 dark:text-blue-300 ml-1" style="font-family: Georgia;">Kelly</span>Nwaogu</h2>
-        <p class="text-lg text-center mt-2 text-gray-700 dark:text-gray-300">From Nigeria &mdash; Building beautiful web experiences</p>
+    <section id="welcome-section" class="mb-12">
+    <div class="welcome-content flex flex-col items-center justify-center py-12 bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 rounded-2xl shadow-2xl mb-8 border border-blue-900/30">
+      <img src="https://i.postimg.cc/RhyDKZzv/profile-pic.png" alt="Melody Kelly Nwaogu" class="profile-img w-40 h-40 rounded-full shadow-xl mb-4 border-4 border-blue-400 dark:border-gray-700">
+      <h1 id="typing-text" class="text-4xl sm:text-5xl font-extrabold mb-2 text-center text-blue-300 drop-shadow-lg">Frontend Web Developer | JavaScript Developer</h1>
+      <h2 class="text-2xl sm:text-3xl font-semibold text-center hover:text-blue-400 transition cursor-pointer">
+        Hi,👋 I'm <span class="font-bold text-purple-300">Melody</span><span class="font-bold text-blue-300 ml-1">Kelly</span> Nwaogu
+      </h2>
+      <p class="text-lg text-center mt-2 text-gray-300">From Nigeria &mdash; Currently focusing on building clean, responsive UIs and dynamic application using HTMl, CSS, and JavaScript.</p>
     </div>
     </section>
-        <div id="project-filter" class="flex justify-center gap-4 mb-8">
-            <button onclick="filterProjects('all')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">All</button>
-            <button onclick="filterProjects('web-dev')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Web Development</button>
-            <button onclick="filterProjects('ml')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Local ML</button>
-            <button onclick="filterProjects('Python')" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Python</button>
-        </div>
-        <section id="about" style="font-family: Georgia;">
-            <h2 class="text-3xl font-bold mb-4 text-center">About Me</h2>
-            <p class="text-lg mb-2 text-center">Hi, I'm <span class="font-semibold text-blue-700">Melody Kelly Nwaogu</span> from Nigeria. I'm an aspiring web developer passionate about building beautiful and functional websites.</p>
-            <p class="mb-2 text-center">I'm proficient in <span class="font-semibold">HTML, CSS, Python</span>. I use <span class="font-semibold">Flask</span> as my backend framework, often working with <span class="font-semibold">PostgreSQL</span> for data storage. I also use Bootstrap for effective design and layouts.</p>
-            <p class="mb-2 text-center">I love learning new technologies and improving my skills. In my free time, I enjoy reading books, playing chess, and exploring new tech.</p>
-            <p class="mb-2 text-center">I am always looking for new challenges and opportunities to grow as a developer. Feel free to reach out if you have any questions or would like to collaborate on a project!</p>
-            <div class="mt-8 max-w-md mx-auto bg-gray-100 dark:bg-gray-800 rounded-lg shadow p-4">
-                <h3 class="text-xl font-semibold mb-2 text-center">Languages</h3>
-                <ul class="flex flex-col items-center gap-2 text-base" style="list-style: none;" >
-                    <li><span class="font-medium">English</span> <span class="text-blue-600 dark:text-green-300">(Proficient)</span></li>
-                    <li><span class="font-medium">Igbo</span> <span class="text-green-600 dark:text-green-300">(Native)</span></li>
-                    <li><span class="font-medium">Chichawa</span> <span class="text-yellow-600 dark:text-yellow-300">(Novice)</span></li>
-                    <li><span class="font-medium">French</span> <span class="text-yellow-600 dark:text-yellow-300">(Novice)</span></li>
-                </ul>
-            </div>
-        </section>
-        <button id="theme-toggle" class="block mx-auto mt-8 px-6 py-2 bg-blue-600 text-white rounded-full shadow hover:bg-blue-700 transition">Switch To Dark Mode</button>
+    <div id="project-filter" class="flex flex-wrap justify-center gap-4 mb-8">
+      <button onclick="filterProjects('all')" class="px-5 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 hover:underline transition-all font-semibold">All</button>
+      <button onclick="filterProjects('web-dev')" class="px-5 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 hover:underline transition-all font-semibold">Web Development</button>
+      <button onclick="filterProjects('ml')" class="px-5 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 hover:underline transition-all font-semibold">Local ML</button>
+      <button onclick="filterProjects('Python')" class="px-5 py-2 bg-blue-600 text-white rounded-full shadow-lg hover:bg-blue-700 hover:scale-105 hover:underline transition-all font-semibold">JavaScript</button>
+    </div>
+    <section id="about" class="mb-12">
+      <h2 class="text-3xl sm:text-4xl font-extrabold mb-4 text-center text-blue-400">About Me</h2>
+      <p class="text-lg mb-2 text-center">Hi, I'm <span class="font-semibold text-blue-400">Melody Kelly Nwaogu</span> from Nigeria. I'm a Frontend web developer passionate about building beautiful and functional websites.</p>
+      <p class="mb-2 text-center">I'm proficient in <span class="font-semibold">HTML, CSS, and JavaScript</span>, with growing experience in modern frontend development. I used <span class="font-semibold">Flask</span> as my backend framework, often working with <span class="font-semibold">PostgreSQL</span> for data storage, but I'm now fully focused on mastering the JavaScript ecosystem. I also use Bootstrap for effective design and layouts.</p>
+      <p class="mb-2 text-center">I love learning new technologies and improving my skills. In my free time, I enjoy reading books, playing chess, and exploring new tech.</p>
+      <p class="mb-2 text-center">I am always looking for new challenges and opportunities to grow as a developer. Feel free to reach out if you have any questions or would like to collaborate on a project!</p>
+      <div class="mt-8 max-w-md mx-auto bg-gradient-to-br from-gray-800 via-gray-900 to-gray-950 rounded-xl shadow-lg p-6 border border-blue-900/20">
+        <h3 class="text-xl font-semibold mb-2 text-center text-purple-300">Languages</h3>
+        <ul class="flex flex-col items-center gap-2 text-base list-none">
+          <li><span class="font-medium">English</span> <span class="text-green-300">(Proficient)</span></li>
+          <li><span class="font-medium">Igbo</span> <span class="text-green-300">(Native)</span></li>
+          <li><span class="font-medium">Chichawa</span> <span class="text-yellow-300">(Novice)</span></li>
+          <li><span class="font-medium">French</span> <span class="text-yellow-300">(Novice)</span></li>
+        </ul>
+      </div>
+    </section>
+        
       
-        <footer class="mt-12 bg-gray-100 dark:bg-gray-900 py-6">
-            <div class="footer-links flex flex-col items-center space-y-2">
-                <p>&copy; 2025 Melody Kelly Nwaogu. All rights reserved.</p>
-                <div class="flex space-x-4">
-                    <a href="https://www.instagram.com/melodykellynwaogu_/profilecard/?igsh=aXNrN3B6Y3MxbWlz" target="_blank" aria-label="Instagram"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
-                    <a href="https://github.com/melodykellynwaogu" target="_blank" aria-label="Github"><i class="fab fa-github text-gray-800 dark:text-gray-200 text-2xl"></i></a>
-                    <a href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin text-blue-700 text-2xl"></i></a>
-                    <a href="https://dev.to/melody_kelly_n" target="_blank"><i class="fab fa-dev text-green-600 text-2xl"></i></a>
-                </div>
-            </div>
-        </footer>
+    <footer class="mt-12 bg-gray-950 py-6 border-t border-blue-900/20">
+      <div class="footer-links flex flex-col items-center space-y-2">
+        <p class="text-gray-400">&copy; 2025 Melody Kelly Nwaogu. All rights reserved.</p>
+        <div class="flex space-x-6">
+          <a href="https://www.instagram.com/melodykellynwaogu_/profilecard/?igsh=aXNrN3B6Y3MxbWlz" target="_blank" aria-label="Instagram" class="hover:scale-110 transition"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
+          <a href="https://github.com/melodykellynwaogu" target="_blank" aria-label="Github" class="hover:scale-110 transition"><i class="fab fa-github text-gray-200 text-2xl"></i></a>
+          <a href="https://www.linkedin.com/in/nwaogu-melody-72267335a?utm_source" target="_blank" aria-label="LinkedIn" class="hover:scale-110 transition"><i class="fab fa-linkedin text-blue-700 text-2xl"></i></a>
+          <a href="https://dev.to/melody_kelly_n" target="_blank" class="hover:scale-110 transition"><i class="fab fa-dev text-green-600 text-2xl"></i></a>
+        </div>
+      </div>
+    </footer>
     </section>
     <script src="script.js"></script>
 </body>
